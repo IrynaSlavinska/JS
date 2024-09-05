@@ -7,31 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Table</title>
     <link rel="stylesheet" href="../css/common.css" />
-    <style>
-        .widget {
-            text-align: center;
-        }
-
-        .widget p {
-            margin-top: 0;
-            margin-bottom: 16px;
-            font-size: 48px;
-        }
-
-        .widget span {
-            font-family: monospace;
-        }
-
-        .widget button {
-            padding: 8px 12px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/table.css" />
 </head>
 
 <body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">USA/CA</th>
+                <!-- <th> </th> -->
+                <th colspan="2">AUS/NZ</th>
+                <!-- <th> </th> -->
+                <th rowspan="2">EU</th>
+                <th colspan="2">Foot length</th>
+                <!-- <th> </th> -->
+                <th colspan="2">Foot width</th>
+                <!-- <th> </th> -->
+            </tr>
 
+            <tr>
+                <th>Men</th>
+                <th>Women</th>
+                <th>Men</th>
+                <th>Women</th>
+                <!-- <th></th> -->
+                <th>Inch</th>
+                <th>Cm</th>
+                <th>Inch</th>
+                <th>Cm</th>
+            </tr>
+        </thead>
+    </table>
 </body>
 
 </html>

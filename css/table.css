@@ -1,0 +1,16 @@
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+    background-color: #98c1dd;
+    border: 10px solid #98c1dd;
+    border-radius: 10px
+}
+
+th {
+    font-size: 18px;
+    padding: 10px;
+    background-color: #62b0e4;
+    border-radius: 4px;
+    text-transform: uppercase;
+    width: 120px;
+}
