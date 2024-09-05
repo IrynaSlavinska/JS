@@ -76,3 +76,39 @@ table#table-2 tbody td:nth-child(8),
 table#table-2 tbody td:nth-child(9) {
     background-color: #fafc91;
 }
+
+/** TABLE 3 STYLES  */
+table#table-3 {
+    border-collapse: collapse;
+    text-align: center;
+    border-spacing: 4px;
+    background-color: #1092e9;
+    border: 10px solid #1092e9;
+    border-radius: 10px;
+    margin: 0 auto 60px;
+}
+
+table#table-3 caption {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+table#table-3 th,
+table#table-3 td {
+    border: 1px solid #ffffff;
+}
+
+table#table-3 th {
+    font-size: 18px;
+    padding: 4px 10px;
+    background-color: #62b0e4;
+    text-transform: uppercase;
+    width: 120px;
+}
+
+table#table-3 td {
+    padding: 4px 10px;
+    background-color: #88c6f0;
+}
