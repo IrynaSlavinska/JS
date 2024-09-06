@@ -1,7 +1,7 @@
 /**  TABLE 1 STYLES */
 table#table-1 {
     border-collapse: separate;
-    border-spacing: 4px;
+    border-spacing: 2px;
     background-color: #1092e9;
     border: 10px solid #1092e9;
     border-radius: 10px;
@@ -24,6 +24,10 @@ table#table-1 th {
     width: 120px;
 }
 
+#table-1 tr:nth-child(odd) td {
+    background-color: #fafc91;
+}
+
 table#table-1 td {
     font-size: 18px;
     background-color: #88c6f0;
@@ -35,7 +39,7 @@ table#table-1 td {
 /** TABLE 2 STYLES  */
 table#table-2 {
     border-collapse: separate;
-    border-spacing: 4px;
+    border-spacing: 2px;
     background-color: #1092e9;
     border: 10px solid #1092e9;
     border-radius: 10px;
@@ -65,17 +69,6 @@ table#table-2 td {
     text-align: center;
     padding: 4px;
 }
-
-/* table#table-2 thead th:nth-child(1),
-table#table-2 tbody td:nth-child(1),
-table#table-2 tbody td:nth-child(2),
-table#table-2 thead th:nth-child(3),
-table#table-2 tbody td:nth-child(5),
-table#table-2 thead th:nth-child(5),
-table#table-2 tbody td:nth-child(8),
-table#table-2 tbody td:nth-child(9) {
-    background-color: #fafc91;
-} */
 
 table#table-2 tbody td:nth-child(1),
 table#table-2 tbody td:nth-child(2),
