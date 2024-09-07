@@ -43,10 +43,11 @@
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
     border-bottom: 200px solid #1092e9;
+    transition: border-bottom-color 0.5s ease;
 }
 
 .triangle-up:hover {
-    border-bottom: 200px solid #f1bb46;
+    border-bottom-color: #fafc91;
 }
 
 .triangle-down {
@@ -55,6 +56,11 @@
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
     border-top: 200px solid #1092e9;
+    transition: border-top-color 0.5s ease;
+}
+
+.triangle-down:hover {
+    border-top-color: #fafc91;
 }
 
 .triangle-left {
@@ -63,6 +69,11 @@
     border-top: 100px solid transparent;
     border-bottom: 100px solid transparent;
     border-right: 200px solid #1092e9;
+    transition: border-right-color 0.5s ease;
+}
+
+.triangle-left:hover {
+    border-right-color: #fafc91;
 }
 
 .triangle-right {
@@ -71,6 +82,11 @@
     border-top: 100px solid transparent;
     border-bottom: 100px solid transparent;
     border-left: 200px solid #1092e9;
+    transition: border-left-color 0.5s ease;
+}
+
+.triangle-right:hover {
+    border-left-color: #fafc91;
 }
 
 .parallelogram {
@@ -78,7 +94,6 @@
     height: 150px;
     background-color: #1092e9;
     transform: skew(20deg);
-
 }
 
 .trapezoid {
@@ -86,4 +101,9 @@
     border-bottom: 150px solid #1092e9;
     border-left: 40px solid transparent;
     border-right: 40px solid transparent;
+    transition: border-bottom-color 0.5s ease;
+}
+
+.trapezoid:hover {
+    border-bottom-color: #fafc91;
 }
