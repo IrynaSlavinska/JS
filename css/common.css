@@ -14,8 +14,10 @@ body {
 }
 
 button {
-    padding: 8px 12px;
+    padding: 10px 20px;
     cursor: pointer;
+    border: none;
+    border-radius: 4px;
 }
 
 h1,
@@ -30,7 +32,6 @@ p {
 
 img {
     display: block;
-    width: 500px;
     max-width: 100%;
 }
 
@@ -43,4 +44,22 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.pages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.pages li {
+    padding: 10px 20px;
+    background-color: #fafc91;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pages li:hover {
+    background-color: #1092e9;
+    color: #ffffff;
 }
