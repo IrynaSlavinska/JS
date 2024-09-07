@@ -1,0 +1,89 @@
+.list {
+    display: flex;
+    max-width: 1400px;
+    gap: 40px;
+    padding: 60px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.list-item {
+    margin: 0px 0px 30px;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    background-color: #1092e9;
+}
+
+.rectangle {
+    width: 250px;
+    height: 150px;
+    background-color: #1092e9;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: #1092e9;
+    border-radius: 50%;
+}
+
+.oval {
+    width: 300px;
+    height: 150px;
+    background-color: #1092e9;
+    border-radius: 50%;
+}
+
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid #1092e9;
+}
+
+.triangle-up:hover {
+    border-bottom: 200px solid #f1bb46;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 200px solid #1092e9;
+}
+
+.triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-right: 200px solid #1092e9;
+}
+
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-left: 200px solid #1092e9;
+}
+
+.parallelogram {
+    width: 250px;
+    height: 150px;
+    background-color: #1092e9;
+    transform: skew(20deg);
+
+}
+
+.trapezoid {
+    width: 250px;
+    border-bottom: 150px solid #1092e9;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+}
