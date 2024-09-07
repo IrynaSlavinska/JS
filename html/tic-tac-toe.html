@@ -13,11 +13,15 @@
 <body>
     <p><a href="../index.html">Go back</a></p>
 
-    <h1 class="js-winner"></h1>
+    <div class="counter">
+        <p>X wins: <span class="js-x-wins wins">0</span></p>
+        <p>O wins: <span class="js-o-wins wins">0</span></p>
+    </div>
     <div class="container">
         <div class="content js-content"></div>
     </div>
-
+    <button type="button" class="reset-btn js-reset">Reset game</button>
+    <h1 class="js-winner winner"></h1>
 
     <script type="module" src="../js/tic-tac-toe.js"></script>
 </body>

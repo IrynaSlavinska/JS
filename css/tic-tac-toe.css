@@ -1,6 +1,13 @@
+.counter {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
 .container {
     display: flex;
-    margin: 100px 50px 50px 50px;
 }
 
 .content {
@@ -24,4 +31,26 @@
 
 .item:hover {
     background-color: #f1f1f10c;
+}
+
+.reset-btn {
+    display: block;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: #1092e9;
+    color: #fafc91;
+    margin: 40px auto;
+
+    transition: background-color 0.2s linear, color 0.2s linear;
+}
+
+.reset-btn:hover {
+    background-color: #fafc91;
+    color: #1092e9;
+}
+
+.winner {
+    text-align: center;
 }
