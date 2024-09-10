@@ -14,10 +14,56 @@
     <p><a href="../index.html">Go back</a></p>
 
     <div class="wrapper">
-        <div class="video">
-            <video src="../videos/doll.mp4" class="video-item" controls></video>
+        <div class="audio-player">
+            <button id="play-pause">Play</button>
+            <input type="range" id="seek-bar" value="0">
+            <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+            <audio id="audio-player" src="../audio/Lindsey Stirling-Crystallize.mp3"></audio>
+        </div>
+
+        <div class="items">
+            <div class="items-body">
+                <div class="item">
+                    <div class="item-video">
+                        <video controls poster="../img/pizza-cards.jpg" preload="metadata " src="../videos/pizza.mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-video">
+                        <video controls poster="../img/pizza-cards.jpg" preload="metadata " src="../videos/pizza.mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-video">
+                        <video controls poster="../img/pizza-cards.jpg" preload="metadata " src="../videos/pizza.mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-video">
+                        <video controls poster="../img/pizza-cards.jpg" preload="metadata " src="../videos/pizza.mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-video">
+                        <iframe src="https://www.youtube.com/embed/AXN9pn7SYE8?si=UJwaOQyDj5u6uwaL"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script type="module" src="../js/video-audio.js"></script>
 </body>
 
 </html>

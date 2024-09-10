@@ -1,11 +1,146 @@
 .wrapper {
-    padding: 100px;
+    min-height: 100vw;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
 
-.video {}
+.items {
+    padding: 50px 0;
+}
 
-.video-item {
-    height: 400px;
+
+.items-body {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.item {}
+
+.item-video {
+    position: relative;
+    margin-bottom: 20px;
+    /* aspect-ratio: 16 / 9; */
+    padding: 0px 0px 56% 0px;
+}
+
+.item-video video,
+.item-video iframe {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.item-text {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* -------------------------------------------- */
+.audio-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#play-pause {
+    background-color: #ec8c31;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#play-pause:hover {
+    background-color: #ec8c31;
+}
+
+#seek-bar {
+    -webkit-appearance: none;
+    /* Вимикаємо стандартний вигляд для WebKit-браузерів (Chrome, Safari) */
+    width: 100%;
+    /* Ширина повністю заповнює контейнер */
+    height: 8px;
+    /* Висота смужки */
+    background: #ddd;
+    /* Колір фону смужки */
+    border-radius: 5px;
+    /* Закруглення кутів смужки */
+    outline: none;
+    /* Вимкнення контуру при фокусі */
+    opacity: 0.7;
+    /* Напівпрозорість */
+    transition: opacity 0.2s;
+    /* Плавна зміна прозорості при наведенні */
+}
+
+#seek-bar:hover {
+    opacity: 1;
+    /* При наведенні елемент стає менш прозорим */
+}
+
+/* Стилізація повзунка (кружка) */
+#seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Вимикаємо стандартний вигляд повзунка для WebKit-браузерів */
+    appearance: none;
+    width: 20px;
+    /* Ширина повзунка */
+    height: 20px;
+    /* Висота повзунка */
+    border-radius: 50%;
+    /* Закруглення повзунка (робимо його круглим) */
+    background: #ec8c31;
+    /* Колір повзунка */
+    cursor: pointer;
+    /* Зміна курсору на "руку" при наведенні */
+    transition: background 0.2s;
+    /* Плавна зміна кольору при взаємодії */
+}
+
+#seek-bar::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ec8c31;
+    cursor: pointer;
+}
+
+/* Для Internet Explorer */
+#seek-bar::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ec8c31;
+    cursor: pointer;
+}
+
+/* Стилізація активної частини смужки (прогресу) */
+#seek-bar::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+#seek-bar::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+#seek-bar::-ms-track {
+    width: 100%;
+    height: 8px;
+    background: transparent;
+    /* Internet Explorer вимагає встановлення прозорого фону */
+    border-color: transparent;
+    color: transparent;
 }
