@@ -1,17 +1,11 @@
 const weatherBlock = document.querySelector("#weather");
 
-const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 const API_KEY = "79af3dc963c806f6f2c45da9e76dd158";
-const city = "Kyiv";
-
-// const BASE_URL = "http://api.weatherapi.com/v1/current.json";
-// const API_KEY = "57ae304b87234faf8d6165600230910";
-// const city = "Kyiv";
 
 async function loadWeather(e) {
   weatherBlock.innerHTML = `<p>Loading...</p>`;
 
-  const server = `${BASE_URL}?q=${city}&${API_KEY}`;
+  const server = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=Kyiv&appid=${API_KEY}`;
 
   const response = await fetch(server, { method: "GET" });
 
@@ -21,26 +15,29 @@ async function loadWeather(e) {
     getWeather(responseResult);
   } else {
     weatherBlock.innerHTML = responseResult.message;
-    console.log(responseResult.message);
   }
 }
 
 function getWeather(data) {
-  //   console.log(data);
+  console.log(data);
 
-  const template = `  
-<div class="weather-header">
+  const location = data.name;
+  const temp = Math.round(data.main.temp);
+  const feelsLike = Math.round(data.main.feels_like);
+  const weatherStatus = data.weather[0].main;
+  const weatherIcon = data.weather[0].icon;
+
+  const template = `
     <div class="weather-main">
-        <p class="weather-city">${data}</p>
-        <p class="weather-status">${data}</p>
+        <p class="weather-city text">${location}</p>
+        <p class="weather-status text">${weatherStatus}</p>
+        <p class="weather-temp text">Temperature: ${temp}</p>
+        <p class="weather-feels text">Feels like: ${feelsLike}</p>
     </div>
 
     <div class="weather-icon">
-        <img src="https://api.openweathermap.org/img/w/${data}" alt="${data}">
-    </div>
-</div>
-<p class="weather-temp">${data}</p>
-<p class="weather-feels">Feels like: ${data}</p>`;
+        <img src="https://openweathermap.org/img/w/${weatherIcon}.png" alt="${weatherStatus}">
+    </div>`;
 
   weatherBlock.innerHTML = template;
 }
