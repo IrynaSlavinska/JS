@@ -1,0 +1,52 @@
+.spoiler-list {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 40px;
+    background-color: #ec8c31;
+    border-radius: 8px;
+}
+
+.spoiler-item {
+    margin-bottom: 16px;
+}
+
+.spoiler-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.spoiler-title::before,
+.spoiler-title::after {
+    content: '';
+    width: 10px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 14px;
+}
+
+.spoiler-title::before {
+    transform: rotate(40deg);
+    left: 0;
+}
+
+.spoiler-title::after {
+    transform: rotate(-40deg);
+    left: 7px;
+}
+
+.spoiler-title.open::before {
+    transform: rotate(135deg);
+}
+
+.spoiler-title.open::after {
+    transform: rotate(45deg);
+}
+
+.spoiler-text {
+    display: none;
+}
