@@ -7,36 +7,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
     <link rel="stylesheet" href="../css/common.css" />
-    <style>
-        .widget {
-            text-align: center;
-        }
-
-        .widget p {
-            margin-top: 0;
-            margin-bottom: 16px;
-            font-size: 48px;
-        }
-
-        .widget span {
-            font-family: monospace;
-        }
-
-        .widget button {
-            padding: 8px 12px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/form.css" />
 </head>
 
 <body>
-    <form name="form" autocomplete="on">
-        <input type="text">
-        <input type="email">
-        <input type="password">
+    <form name="form" autocomplete="on" class="form">
+        <fieldset class="form-group contacts">
+            <legend class="group-title">Enter your contact details</legend>
+            <label>
+                Username
+                <input type="text" name="username" placeholder="Enter your name" autofocus>
+            </label>
+            <label>
+                Email address
+                <input type="email" name="email" placeholder="Enter your email">
+            </label>
+            <label>
+                Password
+                <input type="password" name="password" placeholder="Enter password">
+            </label>
+            <label>
+                Feedback
+                <textarea name="feedback" placeholder="Enter your message here..."></textarea>
+            </label>
+        </fieldset>
 
-        <button type="submit"></button>
+        <fieldset class="form-group">
+            <legend class="group-title">Work with date and time</legend>
+            <label>
+                Date
+                <input type="date" />
+            </label>
+            <label>
+                Time
+                <input type="time" />
+            </label>
+            <label>
+                Date and time
+                <input type="datetime-local" />
+            </label>
+        </fieldset>
+
+        <label>
+            Weight with 0.5 step value:
+            <input type="number" name="weight" min="0" max="200" step="0.5" value="0" />
+        </label>
+
+        <label>
+            Rating
+            <select name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4" selected>4</option>
+                <option value="5">5</option>
+            </select>
+        </label>
+
+        <label>
+            Calendar
+            <select name="Calendar">
+                <optgroup label="Winter">
+                    <option value="s1">January</option>
+                    <option value="s2">February</option>
+                </optgroup>
+
+                <optgroup label="Spring">
+                    <option value="s3">March</option>
+                    <option value="s4">April</option>
+                    <option value="s5">May</option>
+                </optgroup>
+
+                <optgroup label="Summer">
+                    <option value="s6">June</option>
+                    <option value="s7">July</option>
+                    <option value="s8">August</option>
+                </optgroup>
+
+                <optgroup label="Autumn">
+                    <option value="s9">September</option>
+                    <option value="s10">October</option>
+                    <option value="s11">November</option>
+                </optgroup>
+
+                <optgroup label="Winter">
+                    <option value="s12">December</option>
+                </optgroup>
+            </select>
+        </label>
+
+        <fieldset class="form-group">
+            <legend class="group-title">Your favourite programming language</legend>
+            <div class="form-field">
+                <input type="checkbox" name="language" value="html" id="html">
+                <label class="form-label" for="html">HTML</label>
+            </div>
+            <div class="form-field">
+                <input type="checkbox" name="language" value="css" id="css">
+                <label class="form-label" for="css">CSS</label>
+            </div>
+            <div class="form-field">
+                <input type="checkbox" name="language" value="js" id="js">
+                <label class="form-label" for="js">JavaScript</label>
+            </div>
+            <div class="form-field">
+                <input type="checkbox" name="language" value="python" id="python">
+                <label class="form-label" for="python">Python</label>
+            </div>
+            <div class="form-field">
+                <input type="checkbox" name="language" value="react" id="react">
+                <label class="form-label" for="react">React</label>
+            </div>
+            <div class="form-field">
+                <input type="checkbox" name="language" value="node" id="node">
+                <label class="form-label" for="node">Node.JS</label>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="form-group">
+            <legend class="group-title">Payment method</legend>
+            <label>
+                <input type="radio" name="delivery" value="pickup" required />
+                Pickup
+            </label>
+            <label>
+                <input type="radio" name="delivery" value="courier" required />
+                Courier
+            </label>
+
+            <label>
+                <input type="radio" name="payment" value="cash" required />
+                Cash
+            </label>
+            <label>
+                <input type="radio" name="payment" value="card" required />
+                Credit card
+            </label>
+            <label>
+                <input type="radio" name="payment" value="apple" required />
+                Apple pay
+            </label>
+        </fieldset>
+
+        <button type="submit" class="submit-button">Submit</button>
     </form>
 
 </body>

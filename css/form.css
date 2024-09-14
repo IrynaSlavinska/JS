@@ -1,0 +1,43 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.submit-button {
+    background-color: #ec8c31;
+}
+
+input::placeholder {
+    color: teal;
+    font-weight: 700;
+}
+
+input:hover::placeholder,
+input:focus::placeholder {
+    color: orange;
+}
+
+input {
+    border: 1px solid orange;
+    outline: none;
+}
+
+input:placeholder-shown {
+    border-color: blue;
+}
+
+label:focus-within {
+    color: #2196f3;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+}
