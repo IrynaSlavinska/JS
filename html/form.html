@@ -11,24 +11,33 @@
 </head>
 
 <body>
+    <p><a href="../index.html">Go back</a></p>
+
     <form name="form" autocomplete="on" class="form">
-        <fieldset class="form-group contacts">
+        <fieldset class="form-group">
             <legend class="group-title">Enter your contact details</legend>
-            <label>
+            <label class="contacts-label">
                 Username
                 <input type="text" name="username" placeholder="Enter your name" autofocus>
             </label>
-            <label>
+            <label class="contacts-label">
                 Email address
                 <input type="email" name="email" placeholder="Enter your email">
             </label>
-            <label>
+            <label class="contacts-label">
                 Password
                 <input type="password" name="password" placeholder="Enter password">
             </label>
-            <label>
+            <label class="contacts-label">
+                Repeat <input type="password" name="password" placeholder="Repeat password">
+            </label>
+            <label class="contacts-label">
                 Feedback
                 <textarea name="feedback" placeholder="Enter your message here..."></textarea>
+            </label>
+            <label class="contacts-label">
+                Age
+                <input type="number" name="age" min="18" max="120" step="1" value="18" />
             </label>
         </fieldset>
 
@@ -48,105 +57,138 @@
             </label>
         </fieldset>
 
-        <label>
-            Weight with 0.5 step value:
-            <input type="number" name="weight" min="0" max="200" step="0.5" value="0" />
-        </label>
-
-        <label>
-            Rating
-            <select name="rating">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4" selected>4</option>
-                <option value="5">5</option>
-            </select>
-        </label>
-
-        <label>
-            Calendar
-            <select name="Calendar">
-                <optgroup label="Winter">
-                    <option value="s1">January</option>
-                    <option value="s2">February</option>
-                </optgroup>
-
-                <optgroup label="Spring">
-                    <option value="s3">March</option>
-                    <option value="s4">April</option>
-                    <option value="s5">May</option>
-                </optgroup>
-
-                <optgroup label="Summer">
-                    <option value="s6">June</option>
-                    <option value="s7">July</option>
-                    <option value="s8">August</option>
-                </optgroup>
-
-                <optgroup label="Autumn">
-                    <option value="s9">September</option>
-                    <option value="s10">October</option>
-                    <option value="s11">November</option>
-                </optgroup>
-
-                <optgroup label="Winter">
-                    <option value="s12">December</option>
-                </optgroup>
-            </select>
-        </label>
-
         <fieldset class="form-group">
-            <legend class="group-title">Your favourite programming language</legend>
-            <div class="form-field">
-                <input type="checkbox" name="language" value="html" id="html">
-                <label class="form-label" for="html">HTML</label>
-            </div>
-            <div class="form-field">
-                <input type="checkbox" name="language" value="css" id="css">
-                <label class="form-label" for="css">CSS</label>
-            </div>
-            <div class="form-field">
-                <input type="checkbox" name="language" value="js" id="js">
-                <label class="form-label" for="js">JavaScript</label>
-            </div>
-            <div class="form-field">
-                <input type="checkbox" name="language" value="python" id="python">
-                <label class="form-label" for="python">Python</label>
-            </div>
-            <div class="form-field">
-                <input type="checkbox" name="language" value="react" id="react">
-                <label class="form-label" for="react">React</label>
-            </div>
-            <div class="form-field">
-                <input type="checkbox" name="language" value="node" id="node">
-                <label class="form-label" for="node">Node.JS</label>
-            </div>
+            <legend class="group-title">Select date</legend>
+            <label>
+                Day
+                <select name="day">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24 </option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                </select>
+            </label>
 
+            <label>
+                Month
+                <select name="month">
+                    <optgroup label="Winter">
+                        <option value="s1" selected>January</option>
+                        <option value="s2">February</option>
+                    </optgroup>
+
+                    <optgroup label="Spring">
+                        <option value="s3">March</option>
+                        <option value="s4">April</option>
+                        <option value="s5">May</option>
+                    </optgroup>
+
+                    <optgroup label="Summer">
+                        <option value="s6">June</option>
+                        <option value="s7">July</option>
+                        <option value="s8">August</option>
+                    </optgroup>
+
+                    <optgroup label="Autumn">
+                        <option value="s9">September</option>
+                        <option value="s10">October</option>
+                        <option value="s11">November</option>
+                    </optgroup>
+
+                    <optgroup label="Winter">
+                        <option value="s12">December</option>
+                    </optgroup>
+                </select>
+            </label>
         </fieldset>
 
         <fieldset class="form-group">
-            <legend class="group-title">Payment method</legend>
-            <label>
-                <input type="radio" name="delivery" value="pickup" required />
-                Pickup
-            </label>
-            <label>
-                <input type="radio" name="delivery" value="courier" required />
-                Courier
-            </label>
+            <legend class="group-title">Your favourite programming language</legend>
+            <div class="checkbox-wrap">
+                <input class="checkbox-input visually-hidden" type="checkbox" name="language" value="html" id="html">
+                <label class="checkbox-label" for="html">
+                    <span class="custom-checkbox">
+                        <svg class="check-icon" width="10" height="10">
+                            <use href="../icons/icons.svg#icon-check"></use>
+                        </svg>
+                    </span>
+                    HTML
+                </label>
+            </div>
+            <div class="checkbox-wrap">
+                <input class="checkbox-input visually-hidden" type="checkbox" name="language" value="js" id="js">
+                <label class="checkbox-label" for="js">
+                    <span class="custom-checkbox">
+                        <svg class="check-icon" width="10" height="10">
+                            <use href="../icons/icons.svg#icon-check"></use>
+                        </svg>
+                    </span>
+                    JavaScript
+                </label>
+            </div>
+            <div class="checkbox-wrap">
+                <input class="checkbox-input visually-hidden" type="checkbox" name="language" value="react" id="react">
+                <label class="checkbox-label" for="react">
+                    <span class="custom-checkbox">
+                        <svg class="check-icon" width="10" height="10">
+                            <use href="../icons/icons.svg#icon-check"></use>
+                        </svg>
+                    </span>
+                    React
+                </label>
+            </div>
+            <div class="checkbox-wrap">
+                <input class="checkbox-input visually-hidden" type="checkbox" name="language" value="node" id="node">
+                <label class="checkbox-label" for="node">
+                    <span class="custom-checkbox">
+                        <svg class="check-icon" width="10" height="10">
+                            <use href="../icons/icons.svg#icon-check"></use>
+                        </svg>
+                    </span>
+                    Node.JS
+                </label>
+            </div>
+        </fieldset>
 
+        <fieldset class="form-group">
+            <legend class="group-title">Favourite color</legend>
             <label>
-                <input type="radio" name="payment" value="cash" required />
-                Cash
+                <input type="radio" name="color" value="red" required />
+                Red
             </label>
             <label>
-                <input type="radio" name="payment" value="card" required />
-                Credit card
+                <input type="radio" name="color" value="blue" required />
+                Blue
             </label>
             <label>
-                <input type="radio" name="payment" value="apple" required />
-                Apple pay
+                <input type="radio" name="color" value="yellow" required />
+                Yellow
             </label>
         </fieldset>
 

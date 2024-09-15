@@ -1,43 +1,108 @@
+/* general styles */
 .form {
     display: flex;
     flex-direction: column;
-    gap: 10px
+    gap: 16px;
+    padding: 10px 20px;
+    border: 1px solid #570897;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.contacts {
+.form-group {
     display: flex;
     flex-direction: column;
-    gap: 10px
+    gap: 16px;
+    border: 1px solid #570897;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.group-title {
+    font-size: 18px;
+    color: #83898d;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #83898d73;
+}
+
+label:focus-within {
+    color: #ec8c31;
+}
+
+fieldset input:focus,
+fieldset textarea:focus {
+    border-color: #ec8c31;
 }
 
 .submit-button {
     background-color: #ec8c31;
 }
 
-input::placeholder {
-    color: teal;
-    font-weight: 700;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
-input:hover::placeholder,
-input:focus::placeholder {
-    color: orange;
+/* contact block styles */
+.contacts-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-input {
-    border: 1px solid orange;
-    outline: none;
+.contacts-label input,
+.contacts-label textarea {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #570897;
+    border-radius: 4px;
+    max-width: 300px;
 }
 
-input:placeholder-shown {
-    border-color: blue;
+/* checkbox block styles */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-label:focus-within {
-    color: #2196f3;
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ec8c31;
+    border-radius: 4px;
+    cursor: pointer;
+    /* margin-right: 10px; */
+    background-color: #ffffff;
+    position: relative;
 }
 
-textarea {
-    resize: none;
-    outline: none;
+.check-icon {
+    display: none;
+    fill: #ffffff;
+}
+
+.checkbox-input:checked+label .custom-checkbox {
+    background-color: #ec8c31;
+}
+
+.checkbox-input:checked+label .custom-checkbox .check-icon {
+    display: block;
+    fill: #ffffff;
 }

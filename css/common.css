@@ -47,6 +47,13 @@ a {
 }
 
 input {
+    outline: none;
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
+    outline: none;
     font-family: inherit;
 }
 
