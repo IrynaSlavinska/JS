@@ -1,4 +1,4 @@
-/* general styles */
+/** general styles */
 .form {
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@ fieldset textarea:focus {
     overflow: hidden;
 }
 
-/* contact block styles */
+/** contact block styles */
 .contacts-label {
     display: flex;
     justify-content: space-between;
@@ -72,11 +72,12 @@ fieldset textarea:focus {
     max-width: 300px;
 }
 
-/* checkbox block styles */
+/** checkbox block styles */
 .checkbox-label {
     display: flex;
     align-items: center;
     gap: 8px;
+    font-size: 18px;
 }
 
 .custom-checkbox {
@@ -88,7 +89,6 @@ fieldset textarea:focus {
     border: 2px solid #ec8c31;
     border-radius: 4px;
     cursor: pointer;
-    /* margin-right: 10px; */
     background-color: #ffffff;
     position: relative;
 }
@@ -105,4 +105,48 @@ fieldset textarea:focus {
 .checkbox-input:checked+label .custom-checkbox .check-icon {
     display: block;
     fill: #ffffff;
+}
+
+/** radiobuttons block styles */
+.radio-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 35px;
+    font-size: 18px;
+}
+
+.radio-custom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ec8c31;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.radio-custom::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ec8c31;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.radio-input:checked+.radio-custom::after {
+    opacity: 1;
 }
