@@ -14,6 +14,7 @@
     <p><a href="../index.html">Go back</a></p>
 
     <form name="form" autocomplete="on" class="form">
+        <!-- COMMON INPUTS -->
         <fieldset class="form-group">
             <legend class="group-title">Enter your contact details</legend>
             <label class="contacts-label">
@@ -41,36 +42,29 @@
             </label>
         </fieldset>
 
+        <!-- TIME AND DATE -->
         <fieldset class="form-group">
             <legend class="group-title">Work with date and time</legend>
-            <label>
+            <label class="time-label">
                 Date
-                <input type="date" />
+                <input type="date" class="input-times" />
             </label>
-            <label>
+            <label class="time-label">
                 Time
-                <input type="time" />
+                <input type="time" class="input-times" />
             </label>
-            <label>
+            <label class="time-label">
                 Date and time
-                <input type="datetime-local" />
+                <input type="datetime-local" class="input-times" />
             </label>
         </fieldset>
 
+        <!-- SELECT -->
         <fieldset class="form-group">
-            <legend class="group-title">Select gender</legend>
-            <label>
-                Gender
-                <select name="gender">
-                    <option value="no" selected>No gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-            </label>
-
-            <label>
+            <legend class="group-title">Select month</legend>
+            <label class="select-label">
                 Month
-                <select name="month">
+                <select name="month" class="select-month">
                     <optgroup label="Winter">
                         <option value="s1" selected>January</option>
                         <option value="s2">February</option>
@@ -101,6 +95,7 @@
             </label>
         </fieldset>
 
+        <!-- CHECKBOXES -->
         <fieldset class="form-group">
             <legend class="group-title">Your favourite programming language</legend>
             <div class="checkbox-wrap">
@@ -149,10 +144,11 @@
             </div>
         </fieldset>
 
+        <!-- RADIOBUTTONS -->
         <fieldset class="form-group">
             <legend class="group-title">Favourite color</legend>
             <label class="radio-label">
-                <input type="radio" class="radio-input" name="color" value="red" checked>
+                <input type="radio" class="radio-input" name="color" value="red">
                 <span class="radio-custom"></span>
                 Red
             </label>

@@ -40,6 +40,8 @@ fieldset textarea:focus {
 
 .submit-button {
     background-color: #ec8c31;
+    font-size: 18px;
+    letter-spacing: 2px;
 }
 
 .visually-hidden {
@@ -72,6 +74,50 @@ fieldset textarea:focus {
     max-width: 300px;
 }
 
+/** select block styles */
+.select-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.select-month {
+    width: 300px;
+    padding: 4px 8px;
+    font-size: 16px;
+    border: 1px solid #570897;
+    border-radius: 4px;
+    color: #151616;
+    outline: none;
+}
+
+.select-month:focus {
+    border-color: #ec8c31;
+}
+
+/** time block styles */
+.time-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.input-times {
+    width: 300px;
+    padding: 4px 8px;
+    font-size: 16px;
+    border: 1px solid #570897;
+    border-radius: 4px;
+    color: #151616;
+    outline: none;
+}
+
+.input-times:focus {
+    border-color: #ec8c31;
+}
+
 /** checkbox block styles */
 .checkbox-label {
     display: flex;
@@ -86,7 +132,7 @@ fieldset textarea:focus {
     justify-content: center;
     width: 20px;
     height: 20px;
-    border: 2px solid #ec8c31;
+    border: 1px solid #570897;
     border-radius: 4px;
     cursor: pointer;
     background-color: #ffffff;
@@ -100,6 +146,7 @@ fieldset textarea:focus {
 
 .checkbox-input:checked+label .custom-checkbox {
     background-color: #ec8c31;
+    border-color: #ec8c31;
 }
 
 .checkbox-input:checked+label .custom-checkbox .check-icon {
@@ -129,7 +176,7 @@ fieldset textarea:focus {
     top: 0;
     width: 20px;
     height: 20px;
-    border: 2px solid #ec8c31;
+    border: 1px solid #570897;
     border-radius: 50%;
     background-color: white;
 }
@@ -145,6 +192,11 @@ fieldset textarea:focus {
     background-color: #ec8c31;
     border-radius: 50%;
     opacity: 0;
+}
+
+.radio-input:checked+.radio-custom {
+    border-color: #ec8c31;
+    border-width: 2px;
 }
 
 .radio-input:checked+.radio-custom::after {
