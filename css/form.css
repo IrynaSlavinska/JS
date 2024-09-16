@@ -155,50 +155,42 @@ fieldset textarea:focus {
 }
 
 /** radiobuttons block styles */
+.radio-item {}
+
 .radio-input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
+    display: none;
+}
+
+.radio-input:checked+.radio-label::after {
+    transform: scale(1);
 }
 
 .radio-label {
     display: inline-flex;
-    align-items: center;
-    cursor: pointer;
     position: relative;
-    padding-left: 35px;
-    font-size: 18px;
+    align-items: center;
+    font-size: 16px;
 }
 
-.radio-custom {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 20px;
+.radio-label::before {
+    content: '';
+    align-self: flex-start;
+    flex: 0 0 20px;
     height: 20px;
     border: 1px solid #570897;
     border-radius: 50%;
-    background-color: white;
+    margin-right: 4px;
 }
 
-.radio-custom::after {
-    content: "";
+.radio-label::after {
+    content: '';
     position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ec8c31;
+    top: 4px;
+    left: 4px;
+    width: 14px;
+    height: 14px;
+    background-color: #570897;
     border-radius: 50%;
-    opacity: 0;
-}
-
-.radio-input:checked+.radio-custom {
-    border-color: #ec8c31;
-    border-width: 2px;
-}
-
-.radio-input:checked+.radio-custom::after {
-    opacity: 1;
+    transform: scale(0);
+    transition: transform 0.2s linear;
 }

@@ -52,6 +52,7 @@ input {
 }
 
 textarea {
+    min-height: 160px;
     resize: none;
     outline: none;
     font-family: inherit;

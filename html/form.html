@@ -147,24 +147,23 @@
         <!-- RADIOBUTTONS -->
         <fieldset class="form-group">
             <legend class="group-title">Favourite color</legend>
-            <label class="radio-label">
-                <input type="radio" class="radio-input" name="color" value="red">
-                <span class="radio-custom"></span>
-                Red
-            </label>
+            <div class="radio-item">
+                <input type="radio" class="radio-input" name="color" value="red" id="radioRed">
+                <label class="radio-label" for="radioRed"><span>Red</span></label>
+            </div>
 
-            <label class="radio-label">
-                <input type="radio" class="radio-input" name="color" value="blue">
-                <span class="radio-custom"></span>
-                Blue
-            </label>
+            <div class="radio-item">
+                <input type="radio" class="radio-input" name="color" value="blue" id="radioBlue">
+                <label class="radio-label" for="radioBlue"><span>Blue</span></label>
+            </div>
 
-            <label class="radio-label">
-                <input type="radio" class="radio-input" name="color" value="green">
-                <span class="radio-custom"></span>
-                Green
-            </label>
+            <div class="radio-item">
+                <input type="radio" class="radio-input" name="color" value="red" id="radioGreen">
+                <label class="radio-label" for="radioGreen"><span>Green</span></label>
+            </div>
         </fieldset>
+
+
 
         <button type="submit" class="submit-button">Submit</button>
     </form>
