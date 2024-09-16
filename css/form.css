@@ -155,8 +155,6 @@ fieldset textarea:focus {
 }
 
 /** radiobuttons block styles */
-.radio-item {}
-
 .radio-input {
     display: none;
 }
