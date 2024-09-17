@@ -29,8 +29,17 @@ textarea::placeholder {
     color: #83898d73;
 }
 
+label {
+    transition: color 0.2s linear;
+}
+
 label:focus-within {
     color: #ec8c31;
+}
+
+fieldset input,
+fieldset textarea {
+    transition: border-color 0.2s linear;
 }
 
 fieldset input:focus,
@@ -39,9 +48,23 @@ fieldset textarea:focus {
 }
 
 .submit-button {
-    background-color: #ec8c31;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    background-color: #570897;
+    color: #ffffff;
+    text-transform: uppercase;
     font-size: 18px;
     letter-spacing: 2px;
+    border-radius: 30px;
+    transition: background-color 0.2s linear;
+
+}
+
+.submit-button:hover {
+    background-color: #2d054e;
 }
 
 .visually-hidden {
@@ -137,16 +160,19 @@ fieldset textarea:focus {
     cursor: pointer;
     background-color: #ffffff;
     position: relative;
+
+    transition: background-color 0.2s linear,
+        border-color 0.2s linear;
+
 }
 
 .check-icon {
     display: none;
-    fill: #ffffff;
 }
 
 .checkbox-input:checked+label .custom-checkbox {
-    background-color: #ec8c31;
-    border-color: #ec8c31;
+    background-color: #570897;
+    border-color: #570897;
 }
 
 .checkbox-input:checked+label .custom-checkbox .check-icon {
@@ -191,4 +217,45 @@ fieldset textarea:focus {
     border-radius: 50%;
     transform: scale(0);
     transition: transform 0.2s linear;
+}
+
+/** image block styles */
+.file-label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-button {
+    display: inline-flex;
+    min-height: 40px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: #570897;
+    padding: 0 20px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.file-preview {
+    display: inline-block;
+    max-width: 100px;
+    /* ????? */
+    padding-top: 10px;
+}
+
+.file-preview img {
+    max-width: 100%;
 }
