@@ -30,9 +30,6 @@
                 <input type="password" name="password" placeholder="Enter password">
             </label>
             <label class="contacts-label">
-                Repeat <input type="password" name="password" placeholder="Repeat password">
-            </label>
-            <label class="contacts-label">
                 Feedback
                 <textarea name="feedback" placeholder="Enter your message here..."></textarea>
             </label>
@@ -47,15 +44,11 @@
             <legend class="group-title">Work with date and time</legend>
             <label class="time-label">
                 Date
-                <input type="date" class="input-times" />
+                <input type="date" class="input-times" name="datePick" />
             </label>
             <label class="time-label">
                 Time
-                <input type="time" class="input-times" />
-            </label>
-            <label class="time-label">
-                Date and time
-                <input type="datetime-local" class="input-times" />
+                <input type="time" class="input-times" name="timePick" />
             </label>
         </fieldset>
 
@@ -153,7 +146,7 @@
             <input type="radio" class="radio-input" name="color" value="blue" id="radioBlue">
             <label class="radio-label" for="radioBlue"><span>Blue</span></label>
 
-            <input type="radio" class="radio-input" name="color" value="red" id="radioGreen">
+            <input type="radio" class="radio-input" name="color" value="green" id="radioGreen">
             <label class="radio-label" for="radioGreen"><span>Green</span></label>
         </fieldset>
 
@@ -170,6 +163,7 @@
         <button type="submit" class="submit-button">Submit</button>
     </form>
 
+    <script type="module" src="../js/form.js"></script>
 </body>
 
 </html>
