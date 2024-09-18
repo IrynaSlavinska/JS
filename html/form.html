@@ -140,6 +140,7 @@
         <!-- RADIOBUTTONS -->
         <fieldset class="form-group">
             <legend class="group-title">Favourite color</legend>
+
             <input type="radio" class="radio-input" name="color" value="red" id="radioRed">
             <label class="radio-label" for="radioRed"><span>Red</span></label>
 
@@ -148,16 +149,19 @@
 
             <input type="radio" class="radio-input" name="color" value="green" id="radioGreen">
             <label class="radio-label" for="radioGreen"><span>Green</span></label>
+
+            <input type="radio" class="radio-input" name="color" value="nothing" id="nothing" checked>
+            <label class="radio-label" for="nothing"><span>Nothing fron list</span></label>
         </fieldset>
 
         <!-- IMAGE -->
         <fieldset class="form-group">
             <legend class="group-title">Image</legend>
             <label class="file-label">
-                <input type="file" name="file" accept=".jpg, .png, .gif, .jpeg" class="file-input">
+                <input type="file" name="file" accept=".jpg, .png, .gif, .jpeg" class="file-input" id="formImage">
                 <span class="file-button">Choose photo</span>
             </label>
-            <div class="file-preview"></div>
+            <div class="file-preview" id="formPreview"></div>
         </fieldset>
 
         <button type="submit" class="submit-button">Submit</button>
